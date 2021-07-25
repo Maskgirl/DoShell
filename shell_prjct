@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "1. shutdown"
+echo "2.restart"
+echo "3.open internet"
+echo "4.random emoji"
+echo "Enter your choice"
+read ch
+case $ch in
+    1)shutdown ;;
+    2)restart ;;
+    3) xdg-open "https://www.youtube.com/ "
+	    ;;
+	4) while true; do
+	rand=$(shuf -i 2600-2700 -n 1)
+	echo -en "   \u$rand"
+	sleep 1
+done ;;
+        
+    *)echo "Invalid choice";;
+esac 
+
+
